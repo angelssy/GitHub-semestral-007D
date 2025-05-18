@@ -1,4 +1,4 @@
 package com.ecomarket.model;
 
-public class Libro {
+public class Usuario {
 }
