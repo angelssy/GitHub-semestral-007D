@@ -1,7 +1,6 @@
 package com.ecomarket.repository;
 
 import com.ecomarket.model.Usuario;
-import com.ecomarket.service.UsuarioService;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
