@@ -70,8 +70,6 @@ public class UsuarioService {
         }
     }
 
-    public Optional<Usuario> login(String username, String password) {
-        return usuariorepository.findByUsernameAndPassword(username, password);
-    }
+
 
 }
