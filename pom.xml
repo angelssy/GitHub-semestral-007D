@@ -28,11 +28,38 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<spring-ai.version>1.0.0-M8</spring-ai.version>
 	</properties>
+	<dependencyManagement>
+	    <dependencies>
+		    <dependency>
+			   <groupId>org.springframework.ai</groupId>
+			   <artifactId>spring-ai-bom</artifactId>
+			   <version>${spring-ai.version}</version>
+			   <type>pom</type>
+			   <scope>import</scope>
+		    </dependency>
+			<dependency>
+				<groupId>com.oracle.database.jdbc</groupId>
+				<artifactId>ojdbc-bom</artifactId>
+				<version>23.5.0.24.07</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<repositories>
+		<repository>
+			<id>oracle-maven</id>
+			<name>Oracle Maven Repository</name>
+			<url>https://repo1.maven.org/maven2/</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		<groupId>org.springdoc</groupId>
+		<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+		<version>2.8.8</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -48,8 +75,7 @@
 		<!-- Oracle JDBC Driver -->
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
-			<artifactId>ojdbc8</artifactId>
-			<version>19.8.0.0</version>
+			<artifactId>ojdbc11</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.oracle.database.security</groupId>
@@ -72,7 +98,16 @@
 			<artifactId>datafaker</artifactId>
 			<version>2.4.3</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
