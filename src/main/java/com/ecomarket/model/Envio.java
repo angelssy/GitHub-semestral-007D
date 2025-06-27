@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 public class Envio {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -21,5 +22,4 @@ public class Envio {
     private String EnvioName;
     private String EnvioEmail;
     private String patente;
-
 }

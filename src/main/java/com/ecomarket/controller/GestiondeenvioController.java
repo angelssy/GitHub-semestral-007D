@@ -1,7 +1,6 @@
 package com.ecomarket.controller;
 
 import com.ecomarket.model.Gestiondeenvio;
-import com.ecomarket.model.Envio;
 import com.ecomarket.service.GestiondeenvioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

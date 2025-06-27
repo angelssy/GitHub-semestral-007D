@@ -1,5 +1,4 @@
 package com.ecomarket.service;
-
 import com.ecomarket.model.Envio;
 import com.ecomarket.repository.EnvioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ public class EnvioService {
         String output="";
         for(Envio envio:envioRepository.findAll()){
             output+="ID envio: "+envio.getId()+"\n";
-            output+="Nombre envio: "+envio.getEnvioName()+"\n";
+            output+="Nombre envio: "+envio.getPatente()+"\n";
             output+="Email envio: "+envio.getEnvioEmail()+"\n";
             output+="Patente envio: "+envio.getPatente()+"\n";
         }
