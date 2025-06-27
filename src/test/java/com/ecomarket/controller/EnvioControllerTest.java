@@ -79,7 +79,7 @@ class EnvioControllerTest {
     @Test
     void testPutEnvioById_ReturnsUpdatedEnvio() {
         // Configuración
-        Envio envio = new Envio(/* parámetros */1, "Dirección 123");
+        Envio envio = new Envio(/* parámetros */);
         when(envioService.actualizarEnvio(eq(1), any(Envio.class))).thenReturn("Envío actualizado");
 
         // Ejecución
