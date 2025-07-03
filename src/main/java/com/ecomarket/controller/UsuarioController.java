@@ -28,6 +28,10 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
+    public UsuarioController(UsuarioAssembler usuarioAssembler) {
+        this.usuarioAssembler = usuarioAssembler;
+    }
+
     @GetMapping
     public String getUsers() {
         return usuarioService.listarUsuarios();
@@ -51,7 +55,10 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioAssembler.toModel(usuario));
     }
 
-    // ... otros métodos con anotaciones similares
-}
+    public Class<?> getAllUsuarios() {
+    }
+
 
 }
+
+

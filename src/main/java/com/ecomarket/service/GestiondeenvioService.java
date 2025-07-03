@@ -11,7 +11,7 @@ public class GestiondeenvioService {
     @Autowired
     GestiondeenvioRepository gestiondeenvioRepository;
 
-    public String agregarGestiondeenvio(Gestiondeenvio gestiondeenvio) {
+    public Gestiondeenvio agregarGestiondeenvio(Gestiondeenvio gestiondeenvio) {
         gestiondeenvioRepository.save(gestiondeenvio);
         return "Se ha agregado el envio del paquete por el  id: "+gestiondeenvio.getId();
     }
@@ -32,7 +32,7 @@ public class GestiondeenvioService {
             return output;
         }
     }
-    public String obtenerGestiondeenvioPorId(int id){
+    public Gestiondeenvio obtenerGestiondeenvioPorId(int id){
         String output="";
         if (gestiondeenvioRepository.existsById(id)){
             Gestiondeenvio gestiondeenvio=gestiondeenvioRepository.findById(id).get();
