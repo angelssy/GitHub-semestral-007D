@@ -6,6 +6,7 @@ import com.ecomarket.repository.Usuariorepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 @Service
 public class UsuarioService {
 
@@ -70,7 +71,5 @@ public class UsuarioService {
     }
 
 
-    public Usuario obtenerUsuarioPorId(int i) {
-        return null;
-    }
+
 }
