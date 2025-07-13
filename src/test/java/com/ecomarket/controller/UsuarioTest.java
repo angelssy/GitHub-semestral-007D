@@ -31,7 +31,7 @@ class UsuarioTest {
     @Test
     void getUsuarioById_retorna200() throws Exception {
         Usuario usuario = new Usuario(1, "user1", "pass1", "user1@test.com", true);
-        OngoingStubbing<Object> tOngoingStubbing = when(service.obtenerUsuarioPorId(1)).thenReturn(usuario);
+        OngoingStubbing<Usuario> tOngoingStubbing = when(service.obtenerUsuarioPorId(1)).thenReturn(usuario);
 
         mockMvc.perform(get("/users/id/1"))
                 .andExpect(status().isOk())
